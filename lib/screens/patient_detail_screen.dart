@@ -4,6 +4,7 @@ import '../models/evaluation_model.dart';
 import '../services/patient_service.dart';
 import '../services/empatica_service.dart';
 import 'empatica_screen.dart';
+import 'exercise_video_library_screen.dart';
 
 class PatientDetailScreen extends StatefulWidget {
   final Patient hasta;
@@ -321,7 +322,12 @@ class _PatientDetailScreenState extends State<PatientDetailScreen> {
             renk: const Color(0xFF9333EA),
             arkaplan: const Color(0xFFFAF5FF),
             // Egzersiz ekranı başka bir grup üyesinde
-            onTap: () {},
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (_) =>
+                  const ExerciseVideoLibraryScreen()),
+            ),
           ),
         ),
       ],
